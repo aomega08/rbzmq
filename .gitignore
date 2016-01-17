@@ -1,3 +1,4 @@
+*.so
 tmp
 *.gem
 .rvmrc

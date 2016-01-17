@@ -5,7 +5,7 @@ require 'rbzmq/version'
 
 Gem::Specification.new do |s|
   s.name        = 'rbzmq'
-  s.version     = 'ZMQ::VERSION'
+  s.version     = ZMQ::VERSION
   s.summary     = 'Ruby bindings for 0MQ'
   s.description = 'A ruby binding for the latest 0MQ version (4.2)'
   s.authors     = [ 'Francesco Boffa' ]
@@ -15,9 +15,11 @@ Gem::Specification.new do |s|
 
   s.files = `git ls-files`.split("\n")
   s.require_paths = %w(lib)
+  s.extensions = ['ext/rbzmq/extconf.rb']
 
   s.add_development_dependency 'rspec'
   s.add_development_dependency 'rake'
+  s.add_development_dependency 'rake-compiler'
   s.add_development_dependency 'codeclimate-test-reporter'
 end
 
