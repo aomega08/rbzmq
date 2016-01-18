@@ -1,6 +1,8 @@
-class ZMQ
+module ZMQ
 end
 
-require 'rbzmq/rbzmq'
+require 'rbzmq/context'
+require 'rbzmq/socket'
 require 'rbzmq/version'
+require 'rbzmq/rbzmq'
 
